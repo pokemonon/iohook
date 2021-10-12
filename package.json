@@ -1,6 +1,9 @@
 {
     "name": "@pokemonon/iohook",
     "version": "0.0.1-beta.1",
+    "publishConfig": {
+      "access": "public"
+    },
     "scripts": {
         "build": "npm run build:*",
         "build:node": "node-gyp rebuild",
