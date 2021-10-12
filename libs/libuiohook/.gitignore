@@ -1,0 +1,4 @@
+/.idea/
+/.vs/
+/build/
+/include/config.h.in
