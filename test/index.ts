@@ -1,28 +1,28 @@
-import { iohook } from '../src'
+import { iohook } from '../src';
 
 iohook.on('mousemove', (e) => {
-    console.log('mousemove', e)
-})
+    console.log('mousemove', e);
+});
 iohook.on('mousedown', (e) => {
-    console.log('mousedown1', e)
-})
+    console.log('mousedown1', e);
+});
 iohook.on('mousedown', (e) => {
-    console.log('mousedown2', e)
-})
+    console.log('mousedown2', e);
+});
 iohook.on('mousewheel', (e) => {
-    console.log('mousewheel', e)
-})
+    console.log('mousewheel', e);
+});
 iohook.on('keydown', (e) => {
-    console.log('keydown', e)
-})
+    console.log('keydown', e);
+});
 iohook.on('keyup', (e) => {
-    console.log('keyup', e)
-})
+    console.log('keyup', e);
+});
 iohook.once('click', (e) => {
-    console.log('click', e)
-})
+    console.log('click', e);
+});
 
 iohook.start()
     .then(() => {
-        console.log('iohook start done')
+        console.log('iohook start done');
     });

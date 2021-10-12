@@ -1,4 +1,5 @@
-import bindings from 'bindings'
+import bindings from 'bindings';
+
 import { createIPC } from './utils';
 
 export interface IOHookNode {
@@ -66,5 +67,5 @@ export interface HookProcessIPCEvents {
 }
 
 iohookNode.start((evt) => {
-    ipc.emit('iohook-event', evt)
-})
+    ipc.emit('iohook-event', evt);
+});
