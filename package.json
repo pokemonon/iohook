@@ -1,9 +1,9 @@
 {
     "name": "@pokemonon/iohook",
-    "version": "0.0.1-beta.1",
+    "version": "0.0.1-beta.2",
     "main": "lib/index.js",
     "publishConfig": {
-      "access": "public"
+        "access": "public"
     },
     "scripts": {
         "build": "npm run build:node && npm run build:lib",

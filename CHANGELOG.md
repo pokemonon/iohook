@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.1-beta.2](https://github.com/pokemonon/iohook/compare/v0.0.1-beta.1...v0.0.1-beta.2) (2021-10-12)
+
+
+### Features
+
+* add npmignore ([444feaf](https://github.com/pokemonon/iohook/commit/444feaf4c0406ea18237e61292d9efa524e2f7f0))
+* add readme ([e949649](https://github.com/pokemonon/iohook/commit/e9496494365dfc26fc7760ea73f66af25086704c))
+
 ### 0.0.1-beta.1 (2021-10-12)
 
 
