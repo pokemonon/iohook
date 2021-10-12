@@ -1,17 +1,18 @@
 {
     "name": "@pokemonon/iohook",
     "version": "0.0.1-beta.1",
+    "main": "lib/index.js",
     "publishConfig": {
       "access": "public"
     },
     "scripts": {
-        "build": "npm run build:*",
+        "build": "npm run build:node && npm run build:lib",
         "build:node": "node-gyp rebuild",
         "build:lib": "tsc",
         "debug:node": "node-gyp rebuild --debug --python='~/.pyenv/versions/3.9.7/bin'",
         "test": "ts-node test/index.ts",
         "dump": "HUSKY=0 standard-version --release-as",
-        "release": "npm publish"
+        "release": "npm run build && npm publish"
     },
     "dependencies": {
         "@pokemonon/knife": "^1.0.0-beta.8",

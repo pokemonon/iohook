@@ -11,7 +11,7 @@ export enum EventTypeEnum {
     disabled = 'disabled',
     keydown = 'keydown',
     keyup = 'keyup',
-    keytyped = 'keytyped',
+    keypress = 'keypress',
     mousedown = 'mousedown',
     mouseup = 'mouseup',
     click = 'click',
@@ -40,7 +40,7 @@ export interface MouseWheelEventData {
     direction: number;
 }
 export interface KeyboardEvent {
-    type: EventTypeEnum.keydown | EventTypeEnum.keyup | EventTypeEnum.keytyped;
+    type: EventTypeEnum.keydown | EventTypeEnum.keyup | EventTypeEnum.keypress;
     data: KeyboardEventData;
 }
 export interface MouseEvent {

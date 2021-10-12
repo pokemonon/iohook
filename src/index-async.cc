@@ -40,7 +40,7 @@ Object createEvent(Env &env, uiohook_event *event) {
       evt.Set("type", "keyup");
       break;
     case EVENT_KEY_TYPED:
-      evt.Set("type", "keytyped");
+      evt.Set("type", "keypress");
       break;
     case EVENT_MOUSE_PRESSED:
       evt.Set("type", "mousedown");
