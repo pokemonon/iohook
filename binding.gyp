@@ -7,9 +7,6 @@
       "sources": [
         "src/index.cc",
         "src/index.h",
-        # "src/hook-work.cc",
-        # "src/hook-work.h",
-        "libs/libuiohook"
       ],
       "dependencies": [
         "./uiohook.gyp:uiohook"
@@ -23,7 +20,7 @@
         ['OS=="mac"', {
           'xcode_settings': {
             'GCC_ENABLE_CPP_EXCEPTIONS': 'YES'
-          }
+          },
         }]
       ]
     }

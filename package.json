@@ -1,8 +1,11 @@
 {
+  "name": "@pokemonon/iohook",
+  "version": "0.0.1-beta.1",
   "scripts": {
-    "build": "node-gyp rebuild",
-    "build:dev": "node-gyp rebuild --debug --python='~/.pyenv/versions/3.9.7/bin'",
+    "build": "npm run build:*",
+    "build:node": "node-gyp rebuild",
     "build:lib": "tsc",
+    "debug:node": "node-gyp rebuild --debug --python='~/.pyenv/versions/3.9.7/bin'",
     "test": "ts-node test/index.ts"
   },
   "dependencies": {

@@ -22,4 +22,7 @@ iohook.once('click', (e) => {
     console.log('click', e)
 })
 
-iohook.start();
+iohook.start()
+    .then(() => {
+        console.log('iohook start done')
+    });
