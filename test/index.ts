@@ -9,6 +9,9 @@ iohook.on('mousedown', (e) => {
 iohook.on('mousedown', (e) => {
     console.log('mousedown2', e)
 })
+iohook.on('mousewheel', (e) => {
+    console.log('mousewheel', e)
+})
 iohook.on('keydown', (e) => {
     console.log('keydown', e)
 })

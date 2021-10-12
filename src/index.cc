@@ -65,7 +65,7 @@ Object createEvent(Env &env, uiohook_event *event) {
     EVENT_MOUSE_MOVED,
     EVENT_MOUSE_DRAGGED,
   };
-  vector<int> mousewheelEVENT = {
+  vector<int> mousewheelEvents = {
     EVENT_MOUSE_WHEEL
   };
 
@@ -73,9 +73,24 @@ Object createEvent(Env &env, uiohook_event *event) {
     auto eventData = event->data.keyboard;
     data.Set("keycode", eventData.keycode);
     data.Set("rawcode", eventData.rawcode);
-    data.Set("keychar", eventData.keychar);
   }
-  
+  if (find(mouseEvents.begin(), mouseEvents.end(), event->type) != mouseEvents.end()) {
+    auto eventData = event->data.mouse;
+    data.Set("button", eventData.button);
+    data.Set("clicks", eventData.clicks);
+    data.Set("x", eventData.x);
+    data.Set("y", eventData.y);
+  }
+  if (find(mousewheelEvents.begin(), mousewheelEvents.end(), event->type) != mousewheelEvents.end()) {
+    auto eventData = event->data.wheel;
+    data.Set("clicks", eventData.clicks);
+    data.Set("x", eventData.x);
+    data.Set("y", eventData.y);
+    data.Set("type", eventData.type);
+    data.Set("amount", eventData.amount);
+    data.Set("rotation", eventData.rotation);
+    data.Set("direction", eventData.direction);
+  }
   return evt;
 }
 

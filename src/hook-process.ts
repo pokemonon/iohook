@@ -22,7 +22,6 @@ export type EventType = keyof typeof EventTypeEnum
 export interface KeyboardEventData {
     keycode: number;
     rawcode: number;
-    keychar: number;
 }
 export interface MouseEventData {
     button: number;
