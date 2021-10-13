@@ -8,6 +8,6 @@ test
 .eslintrc.js
 .gitmodules
 
-libs/libuiohook
+libs/libuiohook/*
 !libs/libuiohook/src
 !libs/libuiohook/include
