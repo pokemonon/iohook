@@ -6,12 +6,12 @@ import { createIPC, inTS } from './utils';
 import { Event } from './hook-process';
 
 class IOHook extends EventEmitter {
-    #hookProc!: ChildProcess
+    private hookProc!: ChildProcess
     
     async start() {
-        if (this.#hookProc) return;
+        if (this.hookProc) return;
 
-        const hookProc = this.#hookProc = spawn(inTS ? 'ts-node' : 'node', ['./hook-process'], {
+        const hookProc = this.hookProc = spawn(inTS ? 'ts-node' : 'node', ['./hook-process'], {
             stdio: ['ignore', 'ignore', 'ignore', 'ipc'],
             // stdio: ['inherit', 'inherit', 'inherit', 'ipc'],
             cwd: path.dirname(__filename),
